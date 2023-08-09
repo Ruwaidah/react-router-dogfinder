@@ -1,24 +1,28 @@
 import { useParams } from "react-router-dom";
 import NotFound from "./NotFound";
+import "./DogDetails.css";
 
 const DogDetails = (props) => {
   const params = useParams();
-  console.log(params, props.dog);
   if (!props.dog) return <NotFound />;
   return (
-    <div>
+    <div className="DogDetails">
       <div>
-        <p>Name:</p> <p>{props.dog.name}</p>
+        <p className="field">Name:</p>{" "}
+        <p className="field-answer">{props.dog.name}</p>
       </div>
       <div>
-        <p>Age:</p> <p>{props.dog.age}</p>
+        <p className="field"> Age:</p>{" "}
+        <p className="field-answer">{props.dog.age}</p>
       </div>
       <div>
-        <p>Facts:</p>{" "}
-        <div>
-          {props.dog.facts.map((fact) => (
-            <p>{fact}</p>
-          ))}
+        <p className="field">Facts:</p>{" "}
+        <div className="DogDetails facts">
+          <ul>
+            {props.dog.facts.map((fact) => (
+              <li>{fact}</li>
+            ))}
+          </ul>
         </div>
       </div>
     </div>

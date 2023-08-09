@@ -1,0 +1,37 @@
+.DogDetails {
+  display: flex;
+  flex-direction: column;
+  width: 80%;
+  margin: 0 auto;
+  margin-top: 20px;
+}
+
+.DogDetails div {
+  display: flex;
+  justify-content: space-around;
+  align-items: start;
+  width: 60%;
+  margin: 0 auto;
+}
+
+.DogDetails .facts {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  width: 70%;
+}
+ul {
+  padding: 0;
+}
+li {
+  text-align: start;
+}
+.DogDetails .field {
+  width: 30%;
+  text-align: start;
+}
+
+.DogDetails .field-answer {
+  width: 70%;
+  text-align: start;
+}
